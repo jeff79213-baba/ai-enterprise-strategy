@@ -1,0 +1,5 @@
+.env
+*.local
+service-account.json
+opencode-sk-*.json
+node_modules
