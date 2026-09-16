@@ -1,29 +1,74 @@
 # 企業導入 AI 策略框架庫
 
-本專案收集各行業 AI 導入評估報告、評估問卷與詳細配套方案，採用**價值鏈 × 6 大面向矩陣**統一結構。
+## 🔄 標準交付流程
+
+```
+你提供行業 → 我產出「評估表（HTML）」給客戶填寫 → 客戶勾選回傳 → 你依代碼調取「配套方案」組合提案書
+```
+
+| 交付物 | 給誰看 | 用途 | 格式 |
+|--------|--------|------|------|
+| **評估表** | 客戶 | 勾選想導入的項目、列印/存 PDF、匯出 JSON | `.html`（可直接在手機/電腦開啟） |
+| **配套方案** | 你（內部） | 詳細實施步驟、工具比較、成本試算、驗收標準 | `.html`（可下載、列印） |
+
+> **關鍵規則**：評估表只顯示「痛點（紅字）」與「配套方案代碼」，**不顯示解決方案綠字內容**；解決方案完整內容只在配套方案檔案中。
 
 ---
 
-## 📋 可用檔案一覽
+## 📋 現有產業交付包
 
-| 類型 | 行業 | 檔案 | 直接閱讀 (HTML) | 下載 |
-|------|------|------|------------------|------|
-| **評估報告** | 民宿業 | `民宿業AI導入評估報告.html` | [閱讀](民宿業AI導入評估報告.html) | [下載](https://raw.githubusercontent.com/jeff79213-baba/ai-enterprise-strategy/master/民宿業AI導入評估報告.html) |
-| **評估報告** | 傳統 CNC 加工業 | `傳統CNC加工業AI導入評估報告.html` | [閱讀](傳統CNC加工業AI導入評估報告.html) | [下載](https://raw.githubusercontent.com/jeff79213-baba/ai-enterprise-strategy/master/傳統CNC加工業AI導入評估報告.html) |
-| **評估問卷** | 民宿業 | `民宿業AI導入評估問卷.html` | [閱讀/列印](民宿業AI導入評估問卷.html) | [下載](https://raw.githubusercontent.com/jeff79213-baba/ai-enterprise-strategy/master/民宿業AI導入評估問卷.html) |
-| **評估問卷** | 傳統 CNC 加工業 | `傳統CNC加工業AI導入評估問卷.html` | [閱讀/列印](傳統CNC加工業AI導入評估問卷.html) | [下載](https://raw.githubusercontent.com/jeff79213-baba/ai-enterprise-strategy/master/傳統CNC加工業AI導入評估問卷.html) |
-| **配套方案庫說明** | 通用 | `企業導入配套方案/README.md` | [閱讀](企業導入配套方案/README.md) | [下載](https://raw.githubusercontent.com/jeff79213-baba/ai-enterprise-strategy/master/企業導入配套方案/README.md) |
+### 1. 民宿業
+| 檔案 | 連結 | 說明 |
+|------|------|------|
+| **評估表（給客戶）** | [民宿業AI導入評估表.html](民宿業AI導入評估表.html) | 15 項可勾選選項、含代碼對應配套方案 |
+| **配套方案庫（內部）** | [企業導入配套方案/README.md](企業導入配套方案/README.md) | 索引表與命名規則 |
+| &nbsp;&nbsp;→ BNB_B_OP_01 | [PMS + Channel Manager](企業導入配套方案/BNB_B_OP_01_PMS_ChannelManager.html) | 詳細實施細節 |
+| &nbsp;&nbsp;→ BNB_C_CX_01 | [AI 導覽小幫手 + 智慧門鎖](企業導入配套方案/BNB_C_CX_01_AI導覽小幫手.html) | 詳細實施細節 |
+
+### 2. 傳統 CNC 加工業
+| 檔案 | 連結 | 說明 |
+|------|------|------|
+| **評估表（給客戶）** | [傳統CNC加工業AI導入評估表.html](傳統CNC加工業AI導入評估表.html) | 11 項可勾選選項、含代碼對應配套方案 |
+| **配套方案庫（內部）** | [企業導入配套方案/README.md](企業導入配套方案/README.md) | 索引表與命名規則 |
+| &nbsp;&nbsp;→ CNC_A_OP_01 | [AI 報價引擎](企業導入配套方案/CNC_A_OP_01_AI報價引擎.html) | 詳細實施細節 |
+| &nbsp;&nbsp;→ CNC_C_KM_01 | [切削參數知識庫 + 程式版控 + 異常案例庫](企業導入配套方案/CNC_C_KM_01_切削參數知識庫.html) | 詳細實施細節 |
 
 ---
 
-## 📁 詳細配套方案（HTML 版）
+## 📁 配套方案代碼對照表（快速查找）
 
-| 方案代碼 | 方案名稱 | 行業 | 直接閱讀 | 下載 |
-|----------|----------|------|----------|------|
-| `BNB_C_CX_01` | AI 導覽小幫手 + 智慧門鎖 | 民宿 | [閱讀](企業導入配套方案/BNB_C_CX_01_AI導覽小幫手.html) | [下載](https://raw.githubusercontent.com/jeff79213-baba/ai-enterprise-strategy/master/企業導入配套方案/BNB_C_CX_01_AI導覽小幫手.html) |
-| `BNB_B_OP_01` | PMS + Channel Manager | 民宿 | [閱讀](企業導入配套方案/BNB_B_OP_01_PMS_ChannelManager.html) | [下載](https://raw.githubusercontent.com/jeff79213-baba/ai-enterprise-strategy/master/企業導入配套方案/BNB_B_OP_01_PMS_ChannelManager.html) |
-| `CNC_A_OP_01` | AI 報價引擎 | CNC加工 | [閱讀](企業導入配套方案/CNC_A_OP_01_AI報價引擎.html) | [下載](https://raw.githubusercontent.com/jeff79213-baba/ai-enterprise-strategy/master/企業導入配套方案/CNC_A_OP_01_AI報價引擎.html) |
-| `CNC_C_KM_01` | 切削參數知識庫 + 程式版控 + 異常案例庫 | CNC加工 | [閱讀](企業導入配套方案/CNC_C_KM_01_切削參數知識庫.html) | [下載](https://raw.githubusercontent.com/jeff79213-baba/ai-enterprise-strategy/master/企業導入配套方案/CNC_C_KM_01_切削參數知識庫.html) |
+| 代碼 | 產業 | 環節 | 面向 | 方案名稱 |
+|------|------|------|------|----------|
+| BNB_B_OP_01 | 民宿 | 訂房管理 | 營運效率 | PMS + Channel Manager |
+| BNB_C_CX_01 | 民宿 | 住客體驗 | 客戶體驗 | AI 導覽小幫手 + 智慧門鎖 |
+| BNB_E_OP_01 | 民宿 | 後台支援 | 營運效率 | 掃碼巡檢 App |
+| BNB_E_OP_02 | 民宿 | 後台支援 | 營運效率 | 即時經營儀表板 |
+| BNB_C_CX_02 | 民宿 | 住客體驗 | 客戶體驗 | 住客偏好資料庫 |
+| BNB_A_RG_01 | 民宿 | 行銷獲客 | 營收成長 | 官網直訂 + Line 會員 |
+| BNB_C_RG_01 | 民宿 | 住客體驗 | 營收成長 | 住中加購推薦 |
+| BNB_D_RG_01 | 民宿 | 退房複購 | 營收成長 | 評價管理 |
+| BNB_A_DM_01 | 民宿 | 行銷獲客 | 決策支援 | 動態定價演算法 |
+| BNB_E_DM_01 | 民宿 | 後台支援 | 決策支援 | 需求預測 |
+| BNB_E_KM_01 | 民宿 | 後台支援 | 知識管理 | RAG 知識庫 |
+| BNB_E_RC_01 | 民宿 | 後台支援 | 風控合規 | 合規文件自動整理 |
+| CNC_A_OP_01 | CNC加工 | 詢價報價 | 營運效率 | AI 報價引擎 |
+| CNC_C_OP_01 | CNC加工 | 加工製造 | 營運效率 | 機台聯網 + OEE + 刀具預測 |
+| CNC_B_OP_01 | CNC加工 | 生產排程 | 營運效率 | APS 進階排程 |
+| CNC_D_OP_01 | CNC加工 | 出貨交付 | 營運效率 | 數位檢驗儀表板 |
+| CNC_C_KM_01 | CNC加工 | 加工製造 | 知識管理 | 切削參數知識庫 + 程式版控 + 異常案例庫 |
+| CNC_A_CX_01 | CNC加工 | 詢價報價 | 客戶體驗 | 線上詢價平台 + 客戶門戶 |
+| CNC_E_DM_01 | CNC加工 | 後台支援 | 決策支援 | 零件/客戶/機台獲利分析 |
+| CNC_A_RG_01 | CNC加工 | 詢價報價 | 營收成長 | DFM 自動分析 + 高單價切入 |
+| CNC_E_RC_01 | CNC加工 | 後台支援 | 風控合規 | 全製程追溯鏈 + 圖面權管 + OT 網安 |
+
+---
+
+## 🆕 新增產業請直接告訴我
+格式：`請產出 {產業名稱} 的評估表與配套方案`
+
+我會依統一格式產出：
+1. `{產業}AI導入評估表.html` — 給客戶勾選（含所有代碼）
+2. `企業導入配套方案/{代碼}_{方案名稱}.html` — 內部詳細方案（每個勾選項一份）
 
 ---
 
