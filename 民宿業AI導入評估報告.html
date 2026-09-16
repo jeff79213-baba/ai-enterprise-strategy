@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>民宿業 AI 導入評估報告</title>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, "Microsoft JhengHei", sans-serif; line-height: 1.7; max-width: 900px; margin: 0 auto; padding: 24px; color: #1a1a1a; background: #fff; }
+h1 { border-bottom: 3px solid #2563eb; padding-bottom: 12px; margin-bottom: 8px; color: #1e3a5f; }
+h2 { border-left: 4px solid #2563eb; padding-left: 12px; margin-top: 32px; color: #1e3a5f; }
+h3 { color: #334155; margin-top: 24px; }
+.section { margin-bottom: 32px; padding: 20px; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0; }
+.item { margin: 16px 0; padding: 16px; background: white; border-radius: 6px; border: 1px solid #e2e8f0; }
+.item-title { font-weight: 600; color: #1e3a5f; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+.item-title .code { font-size: 0.85em; color: #64748b; background: #f1f5f9; padding: 2px 8px; border-radius: 4px; }
+.problems, .solutions { margin: 12px 0; padding-left: 20px; }
+.problems li, .solutions li { margin: 8px 0; }
+.problems { color: #dc2626; }
+.solutions { color: #059669; }
+.priority { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.85em; font-weight: 600; }
+.priority.high { background: #fef2f2; color: #dc2626; }
+.priority.medium { background: #fffbeb; color: #d97706; }
+.priority.low { background: #f0fdf4; color: #16a34a; }
+.download-btn { display: inline-block; margin-top: 24px; padding: 12px 24px; background: #2563eb; color: white; text-decoration: none; border-radius: 6px; font-weight: 600; }
+.download-btn:hover { background: #1d4ed8; }
+.footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e2e8f0; color: #64748b; font-size: 0.9em; }
+</style>
+</head>
+<body>
+<h1>民宿業 AI 導入評估報告</h1>
+<p style="color:#64748b;">適用對象：民宿、B&B、小型旅館 | 評估日期：2026-09-16</p>
+
+<h2>一、核心業務環節</h2>
+<div class="section">
+<div class="item"><div class="item-title">行銷獲客</div></div>
+<div class="item"><div class="item-title">訂房管理</div></div>
+<div class="item"><div class="item-title">住客體驗</div></div>
+<div class="item"><div class="item-title">退房與複購</div></div>
+<div class="item"><div class="item-title">後台支援</div></div>
+</div>
+
+<h2>二、常見問題與 AI 導入建議</h2>
+
+<h3>營運效率</h3>
+<div class="section">
+<div class="item">
+<div class="item-title">PMS + Channel Manager 自動同步庫存價格 <span class="code">OP-01</span> <span class="priority high">高優先</span></div>
+<ul class="problems">
+<li>手動同步多個 OTA（Booking、Agoda、Expedia、官網）庫存與價格，耗時易錯</li>
+<li>超售、漏單頻發，導致客訴與賠償</li>
+<li>每日對帳耗費 1-2 小時人力</li>
+</ul>
+<ul class="solutions">
+<li>導入 PMS 整合 Channel Manager，自動雙向同步所有通路庫存與價格</li>
+<li>官網訂單自動進系統，取消/修改即時同步</li>
+<li>消除超售、對帳時間縮減 90%</li>
+</ul>
+</div>
+
+<div class="item">
+<div class="item-title">掃碼巡檢/驗房 App + 自動派工 <span class="code">OP-02</span> <span class="priority medium">中優先</span></div>
+<ul class="problems">
+<li>清潔、維修、備品檢查靠紙本簽到，漏檢無追蹤</li>
+<li>異常無法即時通知負責人，處理延遲</li>
+<li>新人上手慢，品質不穩定</li>
+</ul>
+<ul class="solutions">
+<li>導入行動巡檢 App（iAuditor、AppSheet 或國產民宿管理軟體）</li>
+<li>掃碼驗房、拍照上傳、異常自動派工通知</li>
+<li>全程留痕、新人依 SOP 操作即可上手</li>
+</ul>
+</div>
+
+<div class="item">
+<div class="item-title">即時經營儀表板 <span class="code">OP-03</span> <span class="priority medium">中優先</span></div>
+<ul class="problems">
+<li>只能看月報，決策滯後</li>
+<li>訂房率、ADR、RevPAR、OTA 佔比分散在各系統</li>
+</ul>
+<ul class="solutions">
+<li>建置每日自動更新儀表板（Metabase、Power BI 或 PMS 內建）</li>
+<li>關鍵指標一目了然，支援動態定價決策</li>
+</ul>
+</div>
+</div>
+
+<h3>客戶體驗</h3>
+<div class="section">
+<div class="item">
+<div class="item-title">AI 導覽小幫手 + 智慧門鎖自助入住 <span class="code">CX-01</span> <span class="priority high">高優先</span></div>
+<ul class="problems">
+<li>入住需等候櫃台，夜間/假日無人值守</li>
+<li>景點、餐飲、交通推薦靠口頭，不標準、多語言缺口</li>
+<li>住客偏好（枕頭、過敏、樓層）無記錄，回頭客無差異化服務</li>
+</ul>
+<ul class="solutions">
+<li>建置 AI 聊天機器人（Line Bot / 網頁版），24/7 多語言即時回應常見問答、景點推薦、交通資訊</li>
+<li>安裝智慧門鎖，訂單確定自動發送臨時密碼/臉辨入住，免櫃台等候</li>
+<li>建立住客偏好資料庫，回訪自動個人化安排</li>
+</ul>
+</div>
+</div>
+
+<h3>營收成長</h3>
+<div class="section">
+<div class="item">
+<div class="item-title">官網直訂優化 + Line 會員綁定 <span class="code">RG-01</span> <span class="priority high">高優先</span></div>
+<ul class="problems">
+<li>官網訂房流程複雜、無即時庫存，流失率高</li>
+<li>OTA 佣金 15-20%，長期負擔重</li>
+<li>會員名單沉睡，EDM 開信率低，無再行銷機制</li>
+</ul>
+<ul class="solutions">
+<li>嵌入即時訂房引擎，一頁式完成訂房、支援 Line Pay/信用卡</li>
+<li>Line 官方帳號綁定會員，自動發送優惠、生日禮、淡季喚回</li>
+<li>目標：6 個月直訂佔比達 20-30%，大幅降低佣金成本</li>
+</ul>
+</div>
+
+<div class="item">
+<div class="item-title">住中加購推薦（早餐/體驗/接駁） <span class="code">RG-02</span> <span class="priority medium">中優先</span></div>
+<ul class="problems">
+<li>住客多為單晚，無加購機制，客單價低</li>
+<li>早餐、接駁、體驗活動靠前台口頭推銷，轉換率低</li>
+</ul>
+<ul class="solutions">
+<li>依住客畫像（家庭/情侶/獨行/商務）自動推薦適合加購項目</li>
+<li>入住前/住中透過 Line 主動推播優惠，一鍵加購</li>
+<li>預期客單價提升 15-25%</li>
+</ul>
+</div>
+
+<div class="item">
+<div class="item-title">評價管理（自動邀請好評 / 負面情緒偵測） <span class="code">RG-03</span> <span class="priority medium">中優先</span></div>
+<ul class="problems">
+<li>好評不主動索取，差評發現太晚無法挽回</li>
+<li>OTA 評分影響排名與曝光，缺系統化管理</li>
+</ul>
+<ul class="solutions">
+<li>退房後自動發送邀請好評訊息（含連結直達 OTA 評價頁）</li>
+<li>負面關鍵字即時偵測通知業主，啟動服務恢復流程</li>
+<li>提升整體評分、改善 OTA 排名</li>
+</ul>
+</div>
+</div>
+
+<h3>決策支援</h3>
+<div class="section">
+<div class="item">
+<div class="item-title">動態定價演算法 <span class="code">DM-01</span> <span class="priority medium">中優先</span></div>
+<ul class="problems">
+<li>價格定價靠直覺或肉眼觀察競品，RevPAR 未最佳化</li>
+<li>旺季漲價不敢漲，淡季降價不敢降，錯失收益</li>
+</ul>
+<ul class="solutions">
+<li>依訂房曲線、競品價格、周邊活動、歷史資料自動建議最佳價格</li>
+<li>每日/每週自動更新，人工審核後一鍵同步至所有通路</li>
+<li>預期 RevPAR 提升 10-20%</li>
+</ul>
+</div>
+</div>
+
+<h3>知識管理</h3>
+<div class="section">
+<div class="item">
+<div class="item-title">RAG 知識庫（景點/SOP/設備/常見問答） <span class="code">KM-01</span> <span class="priority medium">中優先</span></div>
+<ul class="problems">
+<li>老闆獨家「景點秘笈」只在腦袋，員工離職知識流失</li>
+<li>SOP 分散紙本、Line、口傳，新人帶訓 3-6 個月</li>
+<li>設備維修/保固紀錄查無紀錄</li>
+</ul>
+<ul class="solutions">
+<li>建置 RAG 知識庫（Dify/Coze/Notion AI），餵入景點、SOP、設備手冊、FAQ</li>
+<li>員工/住客同問同答，自然語言查詢「冷氣故障怎麼處理」秒得答案</li>
+<li>新人上手時間縮減 50%，知識資產永久保存</li>
+</ul>
+</div>
+</div>
+
+<h3>風控合規</h3>
+<div class="section">
+<div class="item">
+<div class="item-title">合規文件自動整理 + 個資遮罩/到期刪除 <span class="code">RC-01</span> <span class="priority low">低優先</span></div>
+<ul class="problems">
+<li>旅館業登記、消防、衛生檢查資料臨時抱佛腳</li>
+<li>住客身分證/護照影本管理鬆散，個資法風險</li>
+<li>IoT 設備（門鎖、攝影頭）韌體未更新，恐有資安漏洞</li>
+</ul>
+<ul class="solutions">
+<li>OCR 自動辨識分類合規文件，雲端備查、到期提醒</li>
+<li>個資自動遮罩/加密，保存期限到期自動刪除提醒</li>
+<li>IoT 設備韌體版本監控與自動更新排程</li>
+</ul>
+</div>
+</div>
+
+<h2>三、建議導入優先順序</h2>
+<div class="section">
+<ol>
+<li><strong>PMS + Channel Manager (OP-01)</strong> — 基礎建設，解決超售/對帳，釋放人力</li>
+<li><strong>AI 導覽小幫手 + 智慧門鎖 (CX-01)</strong> — 直接提升住客體驗、降低前台人力</li>
+<li><strong>官網直訂 + Line 會員 (RG-01)</strong> — 降低佣金、建立自有客群資產</li>
+<li><strong>掃碼巡檢 App (OP-02)</strong> — 低成本快速見效，標準化後台作業</li>
+<li><strong>即時儀表板 (OP-03)</strong> — 讓數據導向決策，支援動態定價</li>
+<li><strong>動態定價 (DM-01)</strong> — 有資料基礎後導入，最大化收益</li>
+<li><strong>加購推薦 (RG-02) / 評價管理 (RG-03) / 知識庫 (KM-01)</strong> — 依資源擇一導入</li>
+<li><strong>合規/資安 (RC-01)</strong> — 長期經營必要，可分階段建置</li>
+</ol>
+</div>
+
+<a href="民宿業AI導入評估問卷.html" class="download-btn">下載評估問卷（可列印勾選版）</a>
+<a href="企業導入配套方案/BNB_C_CX_01_AI導覽小幫手.html" class="download-btn" style="margin-left:12px;background:#059669;">查看詳細配套方案</a>
+
+<div class="footer">
+本報告為 AI 輔助評估產出，具體導入請依實地狀況與預算調整。<br>
+詳細實施步驟、工具比較、成本試算請參閱對應「配套方案」檔案。
+</div>
+</body>
+</html>

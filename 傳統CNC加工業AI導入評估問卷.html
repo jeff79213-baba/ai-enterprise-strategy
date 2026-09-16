@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>傳統 CNC 加工業 AI 導入評估問卷（可列印勾選版）</title>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, "Microsoft JhengHei", sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 24px; color: #1a1a1a; }
+@media print { .no-print { display: none; } body { padding: 0; } }
+h1 { text-align: center; border-bottom: 2px solid #2563eb; padding-bottom: 12px; margin-bottom: 8px; color: #1e3a5f; }
+h2 { border-left: 4px solid #2563eb; padding-left: 12px; margin-top: 28px; color: #1e3a5f; }
+h3 { color: #334155; margin-top: 20px; }
+.info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 24px; }
+.info-item { padding: 8px 12px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; }
+.info-label { font-weight: 600; color: #475569; font-size: 0.9em; }
+.info-value { min-height: 28px; border-bottom: 1px dashed #94a3b8; margin-top: 4px; }
+.checkbox-group { margin: 16px 0; }
+.option-row { display: flex; align-items: flex-start; gap: 12px; padding: 12px; background: white; border: 1px solid #e2e8f0; border-radius: 6px; margin: 8px 0; transition: background 0.2s; }
+.option-row:hover { background: #f8fafc; }
+.option-row input[type="checkbox"] { width: 20px; height: 20px; margin-top: 2px; flex-shrink: 0; accent-color: #2563eb; }
+.option-content { flex: 1; }
+.option-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+.option-code { font-family: monospace; font-size: 0.85em; background: #f1f5f9; padding: 2px 8px; border-radius: 4px; color: #475569; }
+.option-title { font-weight: 600; color: #1e3a5f; }
+.priority { padding: 2px 8px; border-radius: 4px; font-size: 0.8em; font-weight: 600; }
+.priority.high { background: #fef2f2; color: #dc2626; }
+.priority.medium { background: #fffbeb; color: #d97706; }
+.priority.low { background: #f0fdf4; color: #16a34a; }
+.option-details { font-size: 0.9em; color: #475569; line-height: 1.7; }
+.detail-row { display: flex; gap: 16px; margin: 4px 0; flex-wrap: wrap; }
+.detail-label { font-weight: 600; color: #334155; min-width: 80px; }
+.detail-value { flex: 1; }
+.category-header { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 6px; padding: 10px 16px; margin: 20px 0 12px; display: flex; align-items: center; gap: 8px; }
+.category-title { font-weight: 600; color: #1e40af; }
+.category-stars { color: #fbbf24; }
+.btn-group { text-align: center; margin: 32px 0; }
+.btn { display: inline-block; padding: 10px 24px; background: #2563eb; color: white; border: none; border-radius: 6px; font-size: 1em; font-weight: 600; cursor: pointer; margin: 0 8px; }
+.btn.secondary { background: #64748b; }
+.btn:hover { opacity: 0.9; }
+.footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #e2e8f0; color: #64748b; font-size: 0.9em; }
+</style>
+</head>
+<body>
+<h1>傳統 CNC 加工業 AI 導入評估問卷</h1>
+<p style="text-align:center;color:#64748b;">請勾選貴公司有意導入的項目，完成後交還顧問彙整配套方案</p>
+
+<h2>基本資料</h2>
+<div class="info-grid">
+<div class="info-item"><div class="info-label">公司/店名</div><div class="info-value"></div></div>
+<div class="info-item"><div class="info-label">地址</div><div class="info-value"></div></div>
+<div class="info-item"><div class="info-label">機台數 / 員工數</div><div class="info-value">____ 台 / ____ 人</div></div>
+<div class="info-item"><div class="info-label">年營業額區間</div><div class="info-value">□ <1000萬 □ 1000-5000萬 □ 5000萬-1億 □ >1億</div></div>
+<div class="info-item"><div class="info-label">現有系統</div><div class="info-value">□ 無 □ ERP：________ □ MES：________ □ CAM：________ □ 刀具管理：________ □ 其他：________</div></div>
+<div class="info-item"><div class="info-label">核心痛點</div><div class="info-value">□ 報價慢/誤差大 □ 排程混亂/插單難 □ 機台利用率低 □ 刀具浪費/崩刀頻繁 □ 交期延遲 □ 品質追溯難 □ 技術傳承斷層 □ 圖面洩漏風險 □ 其他：________</div></div>
+</div>
+
+<h2>AI 導入選項清單（請勾選想導入的項目）</h2>
+
+<div class="category-header"><span class="category-title">營運效率</span><span class="category-stars">★★★</span></div>
+
+<div class="checkbox-group">
+<div class="option-row">
+<input type="checkbox" id="op01">
+<div class="option-content">
+<div class="option-header"><span class="option-code">OP-01</span><span class="option-title">AI 報價引擎（圖面自動辨識 + 成本模型）</span><span class="priority high">高優先</span></div>
+<div class="option-details">
+<div class="detail-row"><span class="detail-label">解決痛點：</span><span class="detail-value">報價靠師傅估、30-60分鐘/件、誤差大、新人不會報</span></div>
+<div class="detail-row"><span class="detail-label">預期效益：</span><span class="detail-value">報價 10x 加速、誤差 ±10%、新人即可報價</span></div>
+<div class="detail-row"><span class="detail-label">投入估算：</span><span class="detail-value">月費 $1-5萬或自建 2-3個月 / 1-2個月上線</span></div>
+</div>
+</div>
+</div>
+
+<div class="option-row">
+<input type="checkbox" id="op02">
+<div class="option-content">
+<div class="option-header"><span class="option-code">OP-02</span><span class="option-title">機台聯網 + 即時 OEE 看板 + 刀具壽命預測</span><span class="priority high">高優先</span></div>
+<div class="option-details">
+<div class="detail-row"><span class="detail-label">解決痛點：</span><span class="detail-value">利用率只看月報、刀具靠感覺換、產能瓶頸不明</span></div>
+<div class="detail-row"><span class="detail-label">預期效益：</span><span class="detail-value">OEE +15-25%、刀具成本 -10-20%、停機 -30%</span></div>
+<div class="detail-row"><span class="detail-label">投入估算：</span><span class="detail-value">硬體 $5-20萬/台 + 整合費 / 2-3個月</span></div>
+</div>
+</div>
+</div>
+
+<div class="option-row">
+<input type="checkbox" id="op03">
+<div class="option-content">
+<div class="option-header"><span class="option-code">OP-03</span><span class="option-title">APS 進階排程（有限產能排程）</span><span class="priority medium">中優先</span></div>
+<div class="option-details">
+<div class="detail-row"><span class="detail-label">解決痛點：</span><span class="detail-value">白板/Excel排程、插單故障須人工重排、交期靠經驗</span></div>
+<div class="detail-row"><span class="detail-label">預期效益：</span><span class="detail-value">準時交付 95%+、秒級重排、產能利用率 ↑</span></div>
+<div class="detail-row"><span class="detail-label">投入估算：</span><span class="detail-value">年費 $20-100萬+ / 3-6個月導入</span></div>
+</div>
+</div>
+</div>
+
+<div class="option-row">
+<input type="checkbox" id="op04">
+<div class="option-content">
+<div class="option-header"><span class="option-code">OP-04</span><span class="option-title">數位檢驗儀表板（FAI/CPK 自動產出）</span><span class="priority medium">中優先</span></div>
+<div class="option-details">
+<div class="detail-row"><span class="detail-label">解決痛點：</span><span class="detail-value">檢驗手工填寫、追溯難、客戶報告整理耗時</span></div>
+<div class="detail-row"><span class="detail-label">預期效益：</span><span class="detail-value">自動產出報告、一鍵追溯全製程</span></div>
+<div class="detail-row"><span class="detail-label">投入估算：</span><span class="detail-value">量測儀介面整合 / 1-2個月</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="category-header"><span class="category-title">知識管理</span><span class="category-stars">★★★</span></div>
+
+<div class="checkbox-group">
+<div class="option-row">
+<input type="checkbox" id="km01">
+<div class="option-content">
+<div class="option-header"><span class="option-code">KM-01</span><span class="option-title">切削參數知識庫 + CNC 程式版控 + 異常案例庫</span><span class="priority high">高優先</span></div>
+<div class="option-details">
+<div class="detail-row"><span class="detail-label">解決痛點：</span><span class="detail-value">師傅經驗在腦袋、程式分散無版控、異常靠口傳、新人 6-12個月上手</span></div>
+<div class="detail-row"><span class="detail-label">預期效益：</span><span class="detail-value">新人 3個月上手、離職不斷檔、技術資產永續</span></div>
+<div class="detail-row"><span class="detail-label">投入估算：</span><span class="detail-value">GitLab + Notion/Dify 低成本 / 整理 1-2個月</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="category-header"><span class="category-title">客戶體驗</span><span class="category-stars">★★</span></div>
+
+<div class="checkbox-group">
+<div class="option-row">
+<input type="checkbox" id="cx01">
+<div class="option-content">
+<div class="option-header"><span class="option-code">CX-01</span><span class="option-title">線上詢價平台 + 客戶專屬門戶</span><span class="priority medium">中優先</span></div>
+<div class="option-details">
+<div class="detail-row"><span class="detail-label">解決痛點：</span><span class="detail-value">詢價等 1-3天、進度靠電話問、異常被動通知</span></div>
+<div class="detail-row"><span class="detail-label">預期效益：</span><span class="detail-value">即時報價+DFM、自助查進度、主動異常通知</span></div>
+<div class="detail-row"><span class="detail-label">投入估算：</span><span class="detail-value">平台建置 / 2-3個月</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="category-header"><span class="category-title">決策支援</span><span class="category-stars">★★</span></div>
+
+<div class="checkbox-group">
+<div class="option-row">
+<input type="checkbox" id="dm01">
+<div class="option-content">
+<div class="option-header"><span class="option-code">DM-01</span><span class="option-title">零件/客戶/機台獲利分析</span><span class="priority medium">中優先</span></div>
+<div class="option-details">
+<div class="detail-row"><span class="detail-label">解決痛點：</span><span class="detail-value">哪個零件/客戶/機台賺錢/虧錢不清楚</span></div>
+<div class="detail-row"><span class="detail-label">預期效益：</span><span class="detail-value">真實毛利可視、識別虧損專案</span></div>
+<div class="detail-row"><span class="detail-label">投入估算：</span><span class="detail-value">BI工具串接ERP/MES / 1-2個月</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="category-header"><span class="category-title">營收成長</span><span class="category-stars">★★</span></div>
+
+<div class="checkbox-group">
+<div class="option-row">
+<input type="checkbox" id="rg01">
+<div class="option-content">
+<div class="option-header"><span class="option-code">RG-01</span><span class="option-title">DFM 自動分析 + 高單價難加工切入</span><span class="priority medium">中優先</span></div>
+<div class="option-details">
+<div class="detail-row"><span class="detail-label">解決痛點：</span><span class="detail-value">單價低、無法切入精密/醫療/航太、客戶份額未深耕</span></div>
+<div class="detail-row"><span class="detail-label">預期效益：</span><span class="detail-value">轉型高單價、主動推薦 VA/VE、客戶份額 ↑</span></div>
+<div class="detail-row"><span class="detail-label">投入估算：</span><span class="detail-value">DFM軟體/自建 / 2-3個月</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="category-header"><span class="category-title">風控合規</span><span class="category-stars">★★</span></div>
+
+<div class="checkbox-group">
+<div class="option-row">
+<input type="checkbox" id="rc01">
+<div class="option-content">
+<div class="option-header"><span class="option-code">RC-01</span><span class="option-title">全製程追溯鏈 + 圖面權管 + OT 網安</span><span class="priority medium">中優先</span></div>
+<div class="option-details">
+<div class="detail-row"><span class="detail-label">解決痛點：</span><span class="detail-value">品質追溯查不到、圖面洩漏風險、CNC連外網恐勒索軟體</span></div>
+<div class="detail-row"><span class="detail-label">預期效益：</span><span class="detail-value">一鍵追溯、零洩漏、零停產網安事件、通過大廠稽核</span></div>
+<div class="detail-row"><span class="detail-label">投入估算：</span><span class="detail-value">MES/PDM/OT防火牆 / 分階段 3-6個月</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="btn-group no-print">
+<button class="btn" onclick="window.print()">列印/存為 PDF</button>
+<button class="btn secondary" onclick="exportChecked()">匯出勾選清單</button>
+</div>
+
+<div class="footer">
+本問卷對應「傳統 CNC 加工業 AI 導入評估報告」與「企業導入配套方案庫」<br>
+勾選項目將對應詳細配套方案（含實施步驟、工具比較、成本試算、驗收標準）
+</div>
+
+<script>
+function exportChecked() {
+  const checked = Array.from(document.querySelectorAll('.option-row input:checked')).map(cb => {
+    const row = cb.closest('.option-row');
+    return {
+      code: row.querySelector('.option-code').textContent,
+      title: row.querySelector('.option-title').textContent,
+      priority: row.querySelector('.priority').textContent
+    };
+  });
+  const blob = new Blob([JSON.stringify(checked, null, 2)], {type: 'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = '勾選清單.json'; a.click();
+  URL.revokeObjectURL(url);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "ai-enterprise-strategy-sk",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
