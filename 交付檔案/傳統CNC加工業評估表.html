@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>傳統 CNC 加工業 AI 導入評估表</title>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, "Microsoft JhengHei", sans-serif; line-height: 1.7; max-width: 900px; margin: 0 auto; padding: 24px; color: #1a1a1a; background: #fff; }
+@media print { .no-print { display: none; } body { padding: 0; } }
+h1 { border-bottom: 3px solid #dc2626; padding-bottom: 12px; margin-bottom: 8px; color: #1e3a5f; }
+h2 { border-left: 4px solid #dc2626; padding-left: 12px; margin-top: 32px; color: #1e3a5f; }
+.item { margin: 16px 0; padding: 16px; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; }
+.item-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; flex-wrap: wrap; }
+.item-title { font-weight: 600; color: #1e3a5f; font-size: 1.1em; }
+.priority { padding: 3px 10px; border-radius: 999px; font-size: 0.8em; font-weight: 700; }
+.priority.high { background: #fef2f2; color: #dc2626; }
+.priority.medium { background: #fffbeb; color: #d97706; }
+.priority.low { background: #f0fdf4; color: #16a34a; }
+.checkbox-wrap { display: flex; align-items: flex-start; gap: 12px; }
+.checkbox-wrap input[type="checkbox"] { width: 22px; height: 22px; margin-top: 3px; flex-shrink: 0; accent-color: #dc2626; }
+.problems { color: #dc2626; margin: 12px 0 0 34px; padding-left: 16px; border-left: 3px solid #fecaca; }
+.problems li { margin: 8px 0; line-height: 1.8; }
+.category-header { background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 12px 16px; margin: 24px 0 16px; display: flex; align-items: center; gap: 10px; }
+.category-title { font-weight: 700; color: #b91c1c; font-size: 1.1em; }
+.core-sections { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; margin-bottom: 32px; }
+.core-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+.core-item { padding: 10px 14px; background: white; border: 1px solid #e2e8f0; border-radius: 6px; font-weight: 500; color: #334155; }
+.btn { display: inline-block; margin: 24px 8px 0 0; padding: 12px 24px; background: #dc2626; color: white; text-decoration: none; border-radius: 6px; font-weight: 600; border: none; cursor: pointer; }
+.btn.secondary { background: #64748b; }
+.btn:hover { opacity: 0.9; }
+.footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e2e8f0; color: #64748b; font-size: 0.9em; text-align: center; }
+</style>
+</head>
+<body>
+<h1>傳統 CNC 加工業 AI 導入評估表</h1>
+<p style="color:#64748b;">請勾選貴公司有意導入的項目，完成後交還顧問</p>
+
+<div class="core-sections">
+<h2>核心業務環節</h2>
+<div class="core-list">
+<div class="core-item">詢價報價</div>
+<div class="core-item">生產排程</div>
+<div class="core-item">加工製造</div>
+<div class="core-item">出貨交付</div>
+<div class="core-item">後台支援</div>
+</div>
+</div>
+
+<h2>AI 導入選項清單</h2>
+
+<div class="category-header"><span class="category-title">營運效率</span></div>
+
+<div class="item">
+<div class="item-header"><span class="item-title">報價耗時且依賴老師傅經驗</span><span class="priority high">高優先</span></div>
+<div class="checkbox-wrap">
+<input type="checkbox" id="op01">
+<div>
+<ul class="problems">
+<li>每張報價單需要資深師傅花 30-60 分鐘人工估算工時、刀具、材料成本，報價週期長導致業務等待甚至流失訂單</li>
+<li>報價結果完全依賴師傅經驗，每個人估出來的價格差異大，無統一標準，新人無法獨立報價</li>
+<li>材料和刀具成本波動時，無法快速更新報價單，導致毛利被壓縮甚至虧損</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="item">
+<div class="item-header"><span class="item-title">機台狀態不透明、故障後才處理</span><span class="priority high">高優先</span></div>
+<div class="checkbox-wrap">
+<input type="checkbox" id="op02">
+<div>
+<ul class="problems">
+<li>機台實際運轉狀況（稼動率、故障次數、循環時間）只能等月底看報表才知道，無法即時掌握</li>
+<li>刀具壽命沒有數據追蹤，要嘛定期更換造成浪費，要嘛用到崩刀才發現，導致停機損失</li>
+<li>哪台機台是瓶頸、該擴機還是外發完全憑感覺判斷，缺乏數據支持決策</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="item">
+<div class="item-header"><span class="item-title">排程靠白板、插單就天下大亂</span><span class="priority medium">中優先</span></div>
+<div class="checkbox-wrap">
+<input type="checkbox" id="op03">
+<div>
+<ul class="problems">
+<li>生產排程靠白板和 Excel 手工安排，遇到插單或機台故障時需全部重排，耗時數小時且容易出錯</li>
+<li>業務接單時無法準確評估交期，承諾的日期經常延遲，影響客戶信任</li>
+<li>無法快速模擬新訂單對現有排程的影響，導致接單決策困難</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="item">
+<div class="item-header"><span class="item-title">檢驗紀錄紙本填寫、追溯困難</span><span class="priority medium">中優先</span></div>
+<div class="checkbox-wrap">
+<input type="checkbox" id="op04">
+<div>
+<ul class="problems">
+<li>每次檢驗紀錄都靠手工填寫在紙本或 Excel 上，追溯零件品質時很難快速調出歷史數據</li>
+<li>客戶要求提供 FAI（首件檢驗報告）或 CPK（製程能力指數）時，需要花大量時間整理資料</li>
+<li>品質異常發生時，無法快速追溯到是哪台機、哪把刀、哪批材料、哪位操作員，追查困難</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="category-header"><span class="category-title">知識管理</span></div>
+
+<div class="item">
+<div class="item-header"><span class="item-title">技術知識靠師傅口傳、人走知識也走</span><span class="priority high">高優先</span></div>
+<div class="checkbox-wrap">
+<input type="checkbox" id="km01">
+<div>
+<ul class="problems">
+<li>資深師傅腦中積累的「切削參數」、「夾治具技巧」、「材料特性」全靠口頭傳授，師傅退休或離職後這些知識就徹底消失</li>
+<li>CNC 程式檔分散在各台電腦和 USB 隨身碟中，沒有版本控制，常常發生用錯版本導致報廢的風險</li>
+<li>遇到崩刀、變形、震刀等異常狀況時，新人要花很長時間才能找出原因，缺乏系統化的異常處理案例庫</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="category-header"><span class="category-title">客戶體驗</span></div>
+
+<div class="item">
+<div class="item-header"><span class="item-title">客戶詢價等待久、進度查詢靠打電話</span><span class="priority medium">中優先</span></div>
+<div class="checkbox-wrap">
+<input type="checkbox" id="cx01">
+<div>
+<ul class="problems">
+<li>客戶詢價後需要等待 1-3 天才能收到報價回覆，缺乏即時回應能力，競爭力弱</li>
+<li>想知道訂單進度時只能打電話或傳 Line 詢問，沒有自助查詢管道，業務疲於應付</li>
+<li>訂單出現延遲或品質異常時都是被動等待客戶發現才回應，缺乏主動通知機制</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="category-header"><span class="category-title">決策支援</span></div>
+
+<div class="item">
+<div class="item-header"><span class="item-title">哪些訂單賺錢、哪些虧損不清楚</span><span class="priority medium">中優先</span></div>
+<div class="checkbox-wrap">
+<input type="checkbox" id="dm01">
+<div>
+<ul class="problems">
+<li>無法清楚知道每個零件、每個客戶、每台機台的真實獲利狀況，決策缺乏數據依據</li>
+<li>報價時估的價格和實際花費的工時、材料往往有落差，有些訂單做到最後才發現虧損</li>
+<li>缺乏系統化的成本分析，無法識別哪些產品線該加碼投入、哪些該果斷放棄</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="category-header"><span class="category-title">營收成長</span></div>
+
+<div class="item">
+<div class="item-header"><span class="item-title">只能做低單價簡單件、無法切入高附加價值市場</span><span class="priority medium">中優先</span></div>
+<div class="checkbox-wrap">
+<input type="checkbox" id="rg01">
+<div>
+<ul class="problems">
+<li>目前只能承接低單價的簡單加工件，無法切入精密零件、醫療器材、航太零件等高單價市場</li>
+<li>既有客戶的份額還沒有深耕，缺乏主動分析客戶需求、推薦改善方案的能力</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="category-header"><span class="category-title">風控合規</span></div>
+
+<div class="item">
+<div class="item-header"><span class="item-title">品質追溯斷鏈、圖面外洩風險、網安漏洞</span><span class="priority medium">中優先</span></div>
+<div class="checkbox-wrap">
+<input type="checkbox" id="rc01">
+<div>
+<ul class="problems">
+<li>發生品質異常時，無法完整追溯「哪台機台、哪把刀具、哪批材料、哪位操作員、什麼參數」的完整鏈路</li>
+<li>客戶圖面和機密檔案隨意存放在電腦、USB 隨身碟或 Line 對話中，缺乏權限控管，有外洩風險</li>
+<li>CNC 控制器和辦公網路未隔離，可能成為駭客入侵的破口，勒索軟體風險高</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="no-print" style="text-align:center;margin:32px 0;">
+<button class="btn" onclick="window.print()">列印/存為 PDF</button>
+<button class="btn secondary" onclick="exportChecked()">匯出勾選清單 (JSON)</button>
+</div>
+
+<div class="footer">
+勾選項目將對應內部「配套方案」檔案（含詳細實施步驟、工具比較、成本試算、驗收標準）
+</div>
+
+<script>
+function exportChecked() {
+  const checked = Array.from(document.querySelectorAll('.item input:checked')).map(cb => {
+    const item = cb.closest('.item');
+    return {
+      title: item.querySelector('.item-title').textContent,
+      priority: item.querySelector('.priority').textContent
+    };
+  });
+  const blob = new Blob([JSON.stringify(checked, null, 2)], {type: 'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'CNC加工業AI導入_勾選清單.json'; a.click();
+  URL.revokeObjectURL(url);
+}
+</script>
+</body>
+</html>

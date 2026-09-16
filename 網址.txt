@@ -4,9 +4,6 @@ https://github.com/jeff79213-baba/ai-enterprise-strategy
 --- GitHub Pages ---
 https://jeff79213-baba.github.io/ai-enterprise-strategy/
 
---- Firebase Hosting ---
-無 firebase.json，未部署
-
 --- 本機預覽 ---
 http://localhost:3000
 
