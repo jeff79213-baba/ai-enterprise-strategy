@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>民宿業 AI 導入評估表</title>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, "Microsoft JhengHei", sans-serif; line-height: 1.7; max-width: 900px; margin: 0 auto; padding: 24px; color: #1a1a1a; background: #fff; }
+@media print { .no-print { display: none; } body { padding: 0; } }
+h1 { border-bottom: 3px solid #dc2626; padding-bottom: 12px; margin-bottom: 8px; color: #1e3a5f; }
+h2 { border-left: 4px solid #dc2626; padding-left: 12px; margin-top: 32px; color: #1e3a5f; }
+.item { margin: 16px 0; padding: 16px; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; }
+.item-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; flex-wrap: wrap; }
+.item-title { font-weight: 600; color: #1e3a5f; font-size: 1.1em; }
+.priority { padding: 3px 10px; border-radius: 999px; font-size: 0.8em; font-weight: 700; }
+.priority.high { background: #fef2f2; color: #dc2626; }
+.priority.medium { background: #fffbeb; color: #d97706; }
+.priority.low { background: #f0fdf4; color: #16a34a; }
+.checkbox-wrap { display: flex; align-items: flex-start; gap: 12px; }
+.checkbox-wrap input[type="checkbox"] { width: 22px; height: 22px; margin-top: 3px; flex-shrink: 0; accent-color: #dc2626; }
+.problems { color: #dc2626; margin: 12px 0 0 34px; padding-left: 16px; border-left: 3px solid #fecaca; }
+.problems li { margin: 8px 0; line-height: 1.8; }
+.category-header { background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 12px 16px; margin: 24px 0 16px; display: flex; align-items: center; gap: 10px; }
+.category-title { font-weight: 700; color: #b91c1c; font-size: 1.1em; }
+.core-sections { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; margin-bottom: 32px; }
+.core-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+.core-item { padding: 10px 14px; background: white; border: 1px solid #e2e8f0; border-radius: 6px; font-weight: 500; color: #334155; }
+.btn { display: inline-block; margin: 24px 8px 0 0; padding: 12px 24px; background: #dc2626; color: white; text-decoration: none; border-radius: 6px; font-weight: 600; border: none; cursor: pointer; }
+.btn.secondary { background: #64748b; }
+.btn:hover { opacity: 0.9; }
+.footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e2e8f0; color: #64748b; font-size: 0.9em; text-align: center; }
+</style>
+</head>
+<body>
+<h1>民宿業 AI 導入評估表</h1>
+<p style="color:#64748b;">請勾選貴公司有意導入的項目，完成後交還顧問</p>
+
+<div class="core-sections">
+<h2>核心業務環節</h2>
+<div class="core-list">
+<div class="core-item">行銷獲客</div>
+<div class="core-item">訂房管理</div>
+<div class="core-item">住客體驗</div>
+<div class="core-item">退房與複購</div>
+<div class="core-item">後台支援</div>
+</div>
+</div>
+
+<h2>AI 導入選項清單</h2>
+
+<div class="category-header"><span class="category-title">營運效率</span></div>
+
+<div class="item">
+<div class="item-header"><span class="item-title">多平台訂房同步困難</span><span class="priority high">高優先</span></div>
+<div class="checkbox-wrap">
+<input type="checkbox" id="op01">
+<div>
+<ul class="problems">
+<li>同時在 Booking、Agoda、Expedia、官網上架，每次有訂單或變更價格都必須手動逐一更新各平台，耗時且容易出錯</li>
+<li>某一平台被訂走後其他平台未同步下架，導致同一房間被兩組客人重複訂購，引發超售爭議與賠償</li>
+<li>每日需花 1-2 小時人工對帳，核對各平台訂單與款項，效率極低</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="item">
+<div class="item-header"><span class="item-title">退房後清潔維修追蹤不透明</span><span class="priority medium">中優先</span></div>
+<div class="checkbox-wrap">
+<input type="checkbox" id="op02">
+<div>
+<ul class="problems">
+<li>每次客人退房後，清潔與備品檢查仍依賴紙本簽到表，無法追溯是否確實完成</li>
+<li>發現設備損壞或異常時（例如冷氣故障、馬桶堵塞），無法即時通知維修人員，導致下一組客人入住時問題仍未解決</li>
+<li>新人清潔人員缺乏標準化流程指引，品質不穩定，容易遺漏重要檢查項目</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="item">
+<div class="item-header"><span class="item-title">經營數據分散難以即時掌握</span><span class="priority medium">中優先</span></div>
+<div class="checkbox-wrap">
+<input type="checkbox" id="op03">
+<div>
+<ul class="problems">
+<li>想了解目前訂房率、平均房價、營收狀況，卻只能等到月底才拿到報表，無法及時調整策略</li>
+<li>訂房率、平均房價、每房收益、各平台佔比等關鍵指標分散在不同系統中，需逐一登入查閱</li>
+<li>缺乏視覺化儀表板，無法快速判斷哪些日期還有空房、哪些平台表現較好</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="category-header"><span class="category-title">客戶體驗</span></div>
+
+<div class="item">
+<div class="item-header"><span class="item-title">深夜或清晨抵達時無人協助入住</span><span class="priority high">高優先</span></div>
+<div class="checkbox-wrap">
+<input type="checkbox" id="cx01">
+<div>
+<ul class="problems">
+<li>客人入住時間常在深夜或清晨（例如 late check-in），但櫃台無人值守，導致客人抵達後無法順利辦裡入住手續，體驗極差</li>
+<li>外國旅客來台時語言不通，櫃台人員無法有效溝通，導致入住流程卡關</li>
+<li>抵達後才詢問附近景點、餐廳、交通方式，服務人員無法即時提供完整資訊，需額外花時間查詢</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="item">
+<div class="item-header"><span class="item-title">回頭客無差異化服務</span><span class="priority medium">中優先</span></div>
+<div class="checkbox-wrap">
+<input type="checkbox" id="cx02">
+<div>
+<ul class="problems">
+<li>曾住過的客人再次預訂時，民宿無法自動調出其偏好（例如加硬枕頭、避免過敏原、喜歡高樓層），每次都需重新詢問</li>
+<li>客人偏好資料分散在不同工作人員腦中或紙本紀錄，無法系統化管理與查詢</li>
+<li>無法主動提供個人化服務（例如生日驚喜、紀念日佈置），錯失提升客戶忠誠度的機會</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="category-header"><span class="category-title">營收成長</span></div>
+
+<div class="item">
+<div class="item-header"><span class="item-title">官網訂房轉換率低且缺乏再行銷機制</span><span class="priority high">高優先</span></div>
+<div class="checkbox-wrap">
+<input type="checkbox" id="rg01">
+<div>
+<ul class="problems">
+<li>官網訂房流程繁瑣（需填寫大量欄位、無即時庫存顯示），客人常在結帳前放棄，導致訂單流失</li>
+<li>長期依賴 OTA 平台，每筆訂單需支付 15-20% 佣金，侵蝕獲利空間</li>
+<li>累積的會員名單缺乏有效經營，EDM 開信率低，無法有效喚回舊客再次消費</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="item">
+<div class="item-header"><span class="item-title">住中加購機會白白流失</span><span class="priority medium">中優先</span></div>
+<div class="checkbox-wrap">
+<input type="checkbox" id="rg02">
+<div>
+<ul class="problems">
+<li>住客在住宿期間想加購早餐、體驗活動或接駁服務，但民宿缺乏主動推播機制，僅靠櫃台口頭推銷，轉換率極低</li>
+<li>每次住宿多為單晚消費，客單價低，無法有效提升每位客人的消費金額</li>
+<li>加購項目（例如在地體驗、浪漫佈置、寵物友善方案）缺乏系統化呈現，客人往往不知道有這些選擇</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="item">
+<div class="item-header"><span class="item-title">好評爭取與負評處理缺乏系統</span><span class="priority medium">中優先</span></div>
+<div class="checkbox-wrap">
+<input type="checkbox" id="rg03">
+<div>
+<ul class="problems">
+<li>滿意的客人退房後不會主動去留好評，民宿從未系統性地邀請滿意住客分享體驗</li>
+<li>負面評價出現時往往發現太晚，錯過最佳回應時機，導致負面影響擴大</li>
+<li>OTA 評分直接影響排名與曝光度，卻缺乏監控與管理機制</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="category-header"><span class="category-title">決策支援</span></div>
+
+<div class="item">
+<div class="item-header"><span class="item-title">定價策略缺乏數據支撐</span><span class="priority medium">中優先</span></div>
+<div class="checkbox-wrap">
+<input type="checkbox" id="dm01">
+<div>
+<ul class="problems">
+<li>房價設定主要憑直覺或參考鄰近同業，未考慮即時供需變化，導致收益未最大化</li>
+<li>旺季時不敢適度漲價，淡季時又不知道該降多少才適合，兩頭都損失</li>
+<li>缺乏即時競品價格監控與歷史數據分析，無法制定靈活的價格策略</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="item">
+<div class="item-header"><span class="item-title">採購與人力安排缺乏預測</span><span class="priority low">低優先</span></div>
+<div class="checkbox-wrap">
+<input type="checkbox" id="dm02">
+<div>
+<ul class="problems">
+<li>備品（毛巾、沐浴用品）和食材採購常發生過量或不足，造成浪費或缺貨</li>
+<li>排班不準確，熱門時段人手不足、冷門時段人力過剩，導致成本失控</li>
+<li>無法根據未來訂房趨勢提前安排資源，總是在事後才發現問題</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="category-header"><span class="category-title">知識管理</span></div>
+
+<div class="item">
+<div class="item-header"><span class="item-title">民宿專業知識與經驗難以傳承</span><span class="priority medium">中優先</span></div>
+<div class="checkbox-wrap">
+<input type="checkbox" id="km01">
+<div>
+<ul class="problems">
+<li>老闆累積的「私房景點」、「隱藏美食」、「在人才知道的交通秘訣」只存在腦袋裡，員工離職後這些知識就跟著流失</li>
+<li>SOP 分散在紙本、Line 群組、口頭傳授中，新人帶訓需要 3-6 個月才能獨立作業</li>
+<li>設備維修紀錄和保固文件查無系統化管理，重複購買或錯過保固期的情況時有發生</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="category-header"><span class="category-title">風控合規</span></div>
+
+<div class="item">
+<div class="item-header"><span class="item-title">法規文件與個資管理臨時抱佛腳</span><span class="priority low">低優先</span></div>
+<div class="checkbox-wrap">
+<input type="checkbox" id="rc01">
+<div>
+<ul class="problems">
+<li>旅館業登記證、消防檢查報告、衛生檢查紀錄等合規文件，總是在稽核前才臨時整理，效率極低且容易遺漏</li>
+<li>住客的身分證或護照影本隨意存放於電腦資料夾或 Line 對話中，缺乏加密與權限控管，有違反個資法的風險</li>
+<li>IoT 設備（智慧門鎖、監視器）韌體未定期更新，可能存在資安漏洞</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="no-print" style="text-align:center;margin:32px 0;">
+<button class="btn" onclick="window.print()">列印/存為 PDF</button>
+<button class="btn secondary" onclick="exportChecked()">匯出勾選清單 (JSON)</button>
+</div>
+
+<div class="footer">
+勾選項目將對應內部「配套方案」檔案（含詳細實施步驟、工具比較、成本試算、驗收標準）
+</div>
+
+<script>
+function exportChecked() {
+  const checked = Array.from(document.querySelectorAll('.item input:checked')).map(cb => {
+    const item = cb.closest('.item');
+    return {
+      title: item.querySelector('.item-title').textContent,
+      priority: item.querySelector('.priority').textContent
+    };
+  });
+  const blob = new Blob([JSON.stringify(checked, null, 2)], {type: 'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = '民宿業AI導入_勾選清單.json'; a.click();
+  URL.revokeObjectURL(url);
+}
+</script>
+</body>
+</html>
