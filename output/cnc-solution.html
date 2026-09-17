@@ -34,12 +34,31 @@ tr:nth-child(even) td { background: #f0fdf4; }
 .overview-table th { background: #d1fae5; color: #065f46; }
 .highlight { background: #fef9c3; padding: 1px 4px; border-radius: 3px; }
 .footnote { color: #64748b; font-size: 0.85em; margin-top: 8px; }
+.legend { background: #ecfdf5; border: 1px solid #bbf7d0; border-radius: 8px; padding: 14px 18px; margin: 20px 0 28px; }
+.legend-title { font-weight: 700; color: #065f46; margin-bottom: 8px; }
+.legend-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+.legend-list li { font-size: 0.92em; color: #334155; }
+.tag { display: inline-block; min-width: 110px; padding: 2px 8px; border-radius: 4px; margin-right: 8px; font-weight: 700; font-size: 0.85em; text-align: center; }
+.tag.l1 { background: #e0f2fe; color: #0369a1; }
+.tag.l2 { background: #dcfce7; color: #15803d; }
+.tag.l3 { background: #fef9c3; color: #a16207; }
+.tag.l4 { background: #ede9fe; color: #6d28d9; }
 </style>
 </head>
 <body>
 
 <h1>傳統CNC加工業 AI 轉型配套方案</h1>
 <p style="color:#64748b;margin-bottom:24px;">對應「傳統CNC加工業 AI 轉型評估表」每一項選項，依優先級排序，含問題描述、解決方案、實施步驟、工具選型、成本效益與驗收標準。</p>
+
+<div class="legend">
+<div class="legend-title">解法分級說明（L1 ~ L4）</div>
+<ul class="legend-list">
+<li><span class="tag l1">L1 流程/制度</span>調整 SOP、分工就能解決，<b>不需要工具</b></li>
+<li><span class="tag l2">L2 系統串接</span>兩系統間手動搬資料，用 API / Webhook / Zapier / 既有軟體同步功能</li>
+<li><span class="tag l3">L3 規則型自動化</span>條件固定、邏輯簡單的重複工作，用腳本 / 巨集 / RPA</li>
+<li><span class="tag l4">L4 AI 輔助</span>需要理解、生成、判斷非結構化內容，<b>才用 AI / LLM</b></li>
+</ul>
+</div>
 
 <div class="category">高優先（3 項）— 直接影響報價、產能與人才，建議第一期導入</div>
 
