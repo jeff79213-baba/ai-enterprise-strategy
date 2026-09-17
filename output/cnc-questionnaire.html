@@ -53,7 +53,7 @@ h2 { border-left: 4px solid #dc2626; padding-left: 12px; margin-top: 32px; color
 <div class="item">
 <div class="item-header"><span class="item-title">報價耗時且依賴老師傅經驗</span><span class="priority high">高優先</span></div>
 <div class="checkbox-wrap">
-<input type="checkbox" id="op01">
+<input type="checkbox" id="op01" data-id="OP-01">
 <div>
 <ul class="problems">
 <li>每張報價單需要資深師傅花 30-60 分鐘人工估算工時、刀具、材料成本，報價週期長導致業務等待甚至流失訂單</li>
@@ -67,7 +67,7 @@ h2 { border-left: 4px solid #dc2626; padding-left: 12px; margin-top: 32px; color
 <div class="item">
 <div class="item-header"><span class="item-title">機台狀態不透明、故障後才處理</span><span class="priority high">高優先</span></div>
 <div class="checkbox-wrap">
-<input type="checkbox" id="op02">
+<input type="checkbox" id="op02" data-id="OP-02">
 <div>
 <ul class="problems">
 <li>機台實際運轉狀況（稼動率、故障次數、循環時間）只能等月底看報表才知道，無法即時掌握</li>
@@ -81,7 +81,7 @@ h2 { border-left: 4px solid #dc2626; padding-left: 12px; margin-top: 32px; color
 <div class="item">
 <div class="item-header"><span class="item-title">排程靠白板、插單就天下大亂</span><span class="priority medium">中優先</span></div>
 <div class="checkbox-wrap">
-<input type="checkbox" id="op03">
+<input type="checkbox" id="op03" data-id="OP-03">
 <div>
 <ul class="problems">
 <li>生產排程靠白板和 Excel 手工安排，遇到插單或機台故障時需全部重排，耗時數小時且容易出錯</li>
@@ -95,7 +95,7 @@ h2 { border-left: 4px solid #dc2626; padding-left: 12px; margin-top: 32px; color
 <div class="item">
 <div class="item-header"><span class="item-title">檢驗紀錄紙本填寫、追溯困難</span><span class="priority medium">中優先</span></div>
 <div class="checkbox-wrap">
-<input type="checkbox" id="op04">
+<input type="checkbox" id="op04" data-id="OP-04">
 <div>
 <ul class="problems">
 <li>每次檢驗紀錄都靠手工填寫在紙本或 Excel 上，追溯零件品質時很難快速調出歷史數據</li>
@@ -111,7 +111,7 @@ h2 { border-left: 4px solid #dc2626; padding-left: 12px; margin-top: 32px; color
 <div class="item">
 <div class="item-header"><span class="item-title">技術知識靠師傅口傳、人走知識也走</span><span class="priority high">高優先</span></div>
 <div class="checkbox-wrap">
-<input type="checkbox" id="km01">
+<input type="checkbox" id="km01" data-id="KM-01">
 <div>
 <ul class="problems">
 <li>資深師傅腦中積累的「切削參數」、「夾治具技巧」、「材料特性」全靠口頭傳授，師傅退休或離職後這些知識就徹底消失</li>
@@ -127,7 +127,7 @@ h2 { border-left: 4px solid #dc2626; padding-left: 12px; margin-top: 32px; color
 <div class="item">
 <div class="item-header"><span class="item-title">客戶詢價等待久、進度查詢靠打電話</span><span class="priority medium">中優先</span></div>
 <div class="checkbox-wrap">
-<input type="checkbox" id="cx01">
+<input type="checkbox" id="cx01" data-id="CX-01">
 <div>
 <ul class="problems">
 <li>客戶詢價後需要等待 1-3 天才能收到報價回覆，缺乏即時回應能力，競爭力弱</li>
@@ -143,7 +143,7 @@ h2 { border-left: 4px solid #dc2626; padding-left: 12px; margin-top: 32px; color
 <div class="item">
 <div class="item-header"><span class="item-title">哪些訂單賺錢、哪些虧損不清楚</span><span class="priority medium">中優先</span></div>
 <div class="checkbox-wrap">
-<input type="checkbox" id="dm01">
+<input type="checkbox" id="dm01" data-id="DM-01">
 <div>
 <ul class="problems">
 <li>無法清楚知道每個零件、每個客戶、每台機台的真實獲利狀況，決策缺乏數據依據</li>
@@ -159,7 +159,7 @@ h2 { border-left: 4px solid #dc2626; padding-left: 12px; margin-top: 32px; color
 <div class="item">
 <div class="item-header"><span class="item-title">只能做低單價簡單件、無法切入高附加價值市場</span><span class="priority medium">中優先</span></div>
 <div class="checkbox-wrap">
-<input type="checkbox" id="rg01">
+<input type="checkbox" id="rg01" data-id="RG-01">
 <div>
 <ul class="problems">
 <li>目前只能承接低單價的簡單加工件，無法切入精密零件、醫療器材、航太零件等高單價市場</li>
@@ -174,7 +174,7 @@ h2 { border-left: 4px solid #dc2626; padding-left: 12px; margin-top: 32px; color
 <div class="item">
 <div class="item-header"><span class="item-title">品質追溯斷鏈、圖面外洩風險、網安漏洞</span><span class="priority medium">中優先</span></div>
 <div class="checkbox-wrap">
-<input type="checkbox" id="rc01">
+<input type="checkbox" id="rc01" data-id="RC-01">
 <div>
 <ul class="problems">
 <li>發生品質異常時，無法完整追溯「哪台機台、哪把刀具、哪批材料、哪位操作員、什麼參數」的完整鏈路</li>
@@ -199,6 +199,7 @@ function exportChecked() {
   const checked = Array.from(document.querySelectorAll('.item input:checked')).map(cb => {
     const item = cb.closest('.item');
     return {
+      id: cb.dataset.id,
       title: item.querySelector('.item-title').textContent,
       priority: item.querySelector('.priority').textContent
     };

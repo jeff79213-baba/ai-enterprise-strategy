@@ -47,7 +47,7 @@ tr:nth-child(even) td { background: #f0fdf4; }
 <!-- 項目 1 -->
 <!-- ═══════════════════════════════════════════════════ -->
 <div class="solution">
-<div class="solution-title">1. 報價耗時且依賴老師傅經驗 <span class="priority high">高優先</span></div>
+<div class="solution-title">對應 OP-01｜1. 報價耗時且依賴老師傅經驗 <span class="priority high">高優先</span></div>
 
 <div class="section">
 <div class="section-title">問題描述</div>
@@ -57,6 +57,13 @@ tr:nth-child(even) td { background: #f0fdf4; }
 <li>新進人員無法獨立報價，嚴重依賴 1–2 位資深人員</li>
 <li>遇到複雜幾何或特殊材質，報價時間更長且容易漏估</li>
 <li>無法快速比較不同加工方案（如：5軸 vs 3+2軸）的成本差異</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-title">解法分級</div>
+<ul class="solutions">
+<li><strong>L4 AI 輔助</strong>：報價需讀懂 2D/3D 圖面非結構化資訊並判斷加工工序，需 LLM 視覺+推理，故屬 L4。</li>
 </ul>
 </div>
 
@@ -133,7 +140,7 @@ tr:nth-child(even) td { background: #f0fdf4; }
 <!-- 項目 2 -->
 <!-- ═══════════════════════════════════════════════════ -->
 <div class="solution">
-<div class="solution-title">2. 機台狀態不透明、故障後才處理 <span class="priority high">高優先</span></div>
+<div class="solution-title">對應 OP-02｜2. 機台狀態不透明、故障後才處理 <span class="priority high">高優先</span></div>
 
 <div class="section">
 <div class="section-title">問題描述</div>
@@ -143,6 +150,15 @@ tr:nth-child(even) td { background: #f0fdf4; }
 <li>產能瓶頸判斷靠廠長直覺，無法用數據佐證排程瓶頸</li>
 <li>機台故障才停機維修，預防性維護幾乎沒有執行</li>
 <li>機台運轉參數（轉速、進給、振動、溫度）缺乏即時監控</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-title">解法分級</div>
+<ul class="solutions">
+<li><strong>L2 系統串接</strong>：機台經 FOCAS / MTConnect / OPC UA 聯網擷取運轉資料，屬設備與系統的資料串接。</li>
+<li><strong>L3 規則型自動化</strong>：OEE 看板依固定公式（稼動率 × 性能率 × 良率）自動計算產出，屬規則型自動化。</li>
+<li><strong>L4 AI 輔助</strong>：刀具壽命預測需分析振動頻譜、切削電流等感測資料並判斷磨損趨勢，屬 AI 分析。合計為 L2+L3+L4 組合。</li>
 </ul>
 </div>
 
@@ -221,7 +237,7 @@ tr:nth-child(even) td { background: #f0fdf4; }
 <!-- 項目 5（提前至高優先群組展示） -->
 <!-- ═══════════════════════════════════════════════════ -->
 <div class="solution">
-<div class="solution-title">3. 技術知識靠師傅口傳、人走知識也走 <span class="priority high">高優先</span></div>
+<div class="solution-title">對應 KM-01｜3. 技術知識靠師傅口傳、人走知識也走 <span class="priority high">高優先</span></div>
 
 <div class="section">
 <div class="section-title">問題描述</div>
@@ -231,6 +247,15 @@ tr:nth-child(even) td { background: #f0fdf4; }
 <li>新進技術員訓練期長達 6–12 個月，嚴重影響產能與排程</li>
 <li>加工經驗無法累積，每次遇到新材料或新工件都重新摸索</li>
 <li>資深師傅退休或離職，整個技術傳承斷裂</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-title">解法分級</div>
+<ul class="solutions">
+<li><strong>L2 系統串接</strong>：CNC 程式中央版控（Git/SVN）與切削參數知識庫屬系統化管理，搭配既有作業流程即可運作。</li>
+<li><strong>L3 規則型自動化</strong>：切削參數推薦可先以規則/查表自動產出建議，屬規則型自動化。</li>
+<li><strong>L4 AI 輔助</strong>：自然語言問答（RAG）需理解非結構化文件並生成答案，故為 L4。合計為 L2+L3+L4 組合。</li>
 </ul>
 </div>
 
@@ -311,7 +336,7 @@ tr:nth-child(even) td { background: #f0fdf4; }
 <!-- 項目 3 -->
 <!-- ═══════════════════════════════════════════════════ -->
 <div class="solution">
-<div class="solution-title">4. 排程靠白板、插單就天下大亂 <span class="priority medium">中優先</span></div>
+<div class="solution-title">對應 OP-03｜4. 排程靠白板、插單就天下大亂 <span class="priority medium">中優先</span></div>
 
 <div class="section">
 <div class="section-title">問題描述</div>
@@ -321,6 +346,13 @@ tr:nth-child(even) td { background: #f0fdf4; }
 <li>交期承諾不準確，業務不敢對客戶承諾確切日期</li>
 <li>缺乏「如果……會怎樣」的排程模擬能力（What-if 分析）</li>
 <li>緊急訂單與常規訂單的優先級判斷缺乏客觀依據</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-title">解法分級</div>
+<ul class="solutions">
+<li><strong>L3 規則型自動化</strong>：APS 排程是條件固定、邏輯明確的最佳化引擎（約束條件 + 演算法），不需理解非結構化內容，不屬 LLM，故為 L3。</li>
 </ul>
 </div>
 
@@ -398,7 +430,7 @@ tr:nth-child(even) td { background: #f0fdf4; }
 <!-- 項目 4 -->
 <!-- ═══════════════════════════════════════════════════ -->
 <div class="solution">
-<div class="solution-title">5. 檢驗紀錄紙本填寫、追溯困難 <span class="priority medium">中優先</span></div>
+<div class="solution-title">對應 OP-04｜5. 檢驗紀錄紙本填寫、追溯困難 <span class="priority medium">中優先</span></div>
 
 <div class="section">
 <div class="section-title">問題描述</div>
@@ -408,6 +440,14 @@ tr:nth-child(even) td { background: #f0fdf4; }
 <li>品質異常發生時，難以追溯是哪台機台、哪把刀具、哪個操作員、什麼參數</li>
 <li>品質數據無法即時統計分析，問題都是累積到一定程度才發現</li>
 <li>客戶要求提供品質紀錄時，需翻閱大量紙本資料，回應緩慢</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-title">解法分級</div>
+<ul class="solutions">
+<li><strong>L2 系統串接</strong>：量測儀器數據串接至檢驗系統，屬設備與系統的資料串接。</li>
+<li><strong>L3 規則型自動化</strong>：FAI / CPK 報告依固定公式自動計算產出，屬規則型自動化。合計為 L2+L3 組合。</li>
 </ul>
 </div>
 
@@ -486,7 +526,7 @@ tr:nth-child(even) td { background: #f0fdf4; }
 <!-- 項目 6 -->
 <!-- ═══════════════════════════════════════════════════ -->
 <div class="solution">
-<div class="solution-title">6. 客戶詢價等待久、進度查詢靠打電話 <span class="priority medium">中優先</span></div>
+<div class="solution-title">對應 CX-01｜6. 客戶詢價等待久、進度查詢靠打電話 <span class="priority medium">中優先</span></div>
 
 <div class="section">
 <div class="section-title">問題描述</div>
@@ -496,6 +536,14 @@ tr:nth-child(even) td { background: #f0fdf4; }
 <li>異常狀況（延遲、品質問題）被動等待發現，缺乏主動通知機制</li>
 <li>客戶無法自助查詢進度，每次都要打電話，影響滿意度</li>
 <li>多個業務同時詢問同一訂單進度，造成現場多次中斷</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-title">解法分級</div>
+<ul class="solutions">
+<li><strong>L2 系統串接</strong>：建置線上詢價平台與客戶專屬門戶，串接 MES/ERP 訂單狀態同步，屬系統建置與資料串接。</li>
+<li><strong>L4 AI 輔助（選配）</strong>：客服問答機器人與 DFM 可行性提示需理解非結構化內容，若導入才屬 L4。</li>
 </ul>
 </div>
 
@@ -574,7 +622,7 @@ tr:nth-child(even) td { background: #f0fdf4; }
 <!-- 項目 7 -->
 <!-- ═══════════════════════════════════════════════════ -->
 <div class="solution">
-<div class="solution-title">7. 哪些訂單賺錢、哪些虧損不清楚 <span class="priority medium">中優先</span></div>
+<div class="solution-title">對應 DM-01｜7. 哪些訂單賺錢、哪些虧損不清楚 <span class="priority medium">中優先</span></div>
 
 <div class="section">
 <div class="section-title">問題描述</div>
@@ -584,6 +632,14 @@ tr:nth-child(even) td { background: #f0fdf4; }
 <li>報價與實際成本常有落差，部分訂單做越多虧越多</li>
 <li>無法區分各機台的真實貢獻度與成本效率</li>
 <li>月結報表粗糙，無法支撐精準定價策略</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-title">解法分級</div>
+<ul class="solutions">
+<li><strong>L2 系統串接</strong>：將 MES 機台工時、ERP 材料領用與人事薪資串接成單一成本模型，屬系統間資料串接。</li>
+<li><strong>L3 規則型自動化</strong>：BI 利潤報表依固定公式自動計算毛利與成本分析，不需 AI。合計為 L2+L3 組合。</li>
 </ul>
 </div>
 
@@ -661,7 +717,7 @@ tr:nth-child(even) td { background: #f0fdf4; }
 <!-- 項目 8 -->
 <!-- ═══════════════════════════════════════════════════ -->
 <div class="solution">
-<div class="solution-title">8. 只能做低單價簡單件、無法切入高附加價值市場 <span class="priority medium">中優先</span></div>
+<div class="solution-title">對應 RG-01｜8. 只能做低單價簡單件、無法切入高附加價值市場 <span class="priority medium">中優先</span></div>
 
 <div class="section">
 <div class="section-title">問題描述</div>
@@ -671,6 +727,13 @@ tr:nth-child(even) td { background: #f0fdf4; }
 <li>不了解高附加價值市場的認證需求（ISO 13485、AS9100、NADCAP）</li>
 <li>加工精度不穩定，品質一致性不足，難以通過精密客戶的審廠</li>
 <li>缺乏先進加工技術（5軸、微細加工、超精密加工）的知識與經驗</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-title">解法分級</div>
+<ul class="solutions">
+<li><strong>L4 AI 輔助</strong>：DFM 自動分析需判讀設計圖面等非結構化資訊並判斷製程可行性，需 LLM/視覺模型，故屬 L4。</li>
 </ul>
 </div>
 
@@ -748,7 +811,7 @@ tr:nth-child(even) td { background: #f0fdf4; }
 <!-- 項目 9 -->
 <!-- ═══════════════════════════════════════════════════ -->
 <div class="solution">
-<div class="solution-title">9. 品質追溯斷鏈、圖面外洩風險、網安漏洞 <span class="priority medium">中優先</span></div>
+<div class="solution-title">對應 RC-01｜9. 品質追溯斷鏈、圖面外洩風險、網安漏洞 <span class="priority medium">中優先</span></div>
 
 <div class="section">
 <div class="section-title">問題描述</div>
@@ -758,6 +821,15 @@ tr:nth-child(even) td { background: #f0fdf4; }
 <li>OT（營運技術）網路與 IT 網路未隔離，存在横向移動風險</li>
 <li> CNC 機台多數使用 Windows XP/7 或無安全防護的嵌入式系統，容易遭受攻擊</li>
 <li>USB 隨身碟隨意插拔，可能引入惡意軟體感染機台控制器</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-title">解法分級</div>
+<ul class="solutions">
+<li><strong>L1 流程/制度</strong>：USB 禁用、圖面取用權限、資安教育訓練屬制度與分工調整，不需工具。</li>
+<li><strong>L2 系統串接</strong>：圖面集中管理（DMS）與 OT/IT 網路隔離屬系統導入與設定，不屬 LLM。</li>
+<li><strong>L3 規則型自動化</strong>：全製程追溯碼依固定規則綁定並自動產出紀錄，屬規則型自動化。合計為 L1+L2+L3 組合。</li>
 </ul>
 </div>
 
@@ -872,7 +944,7 @@ tr:nth-child(even) td { background: #f0fdf4; }
 </div>
 
 <div class="no-print" style="text-align:center;margin:32px 0;">
-<a href="傳統CNC加工業評估表.html" class="btn">返回評估表</a>
+<a href="cnc-questionnaire.html" class="btn">返回評估表</a>
 </div>
 <div style="margin-top:48px;padding-top:24px;border-top:1px solid #e2e8f0;color:#64748b;font-size:0.9em;text-align:center;">
 此為內部配套方案，對應評估表每一項選項，依優先級排序
