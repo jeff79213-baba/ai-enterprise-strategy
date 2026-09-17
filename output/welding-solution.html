@@ -41,7 +41,7 @@ tr:nth-child(even) td { background: #f0fdf4; }
 
 <!-- ===== 1 ===== -->
 <div class="solution">
-<div class="solution-title">1. 報價依賴老師傅估算、速度慢且不標準 <span class="priority high">高優先</span></div>
+<div class="solution-title">對應 OP-01｜1. 報價依賴老師傅估算、速度慢且不標準 <span class="priority high">高優先</span></div>
 
 <div class="section"><div class="section-title">問題描述</div>
 <ul class="problems">
@@ -49,6 +49,11 @@ tr:nth-child(even) td { background: #f0fdf4; }
 <li>報價結果因人而異，缺乏標準公式，不同業務報價差異可達 20%</li>
 <li>新人無法獨立報價，人才斷層風險高</li>
 <li>隱藏成本（夾具損耗、焊材、後處理）常被低估，導致接單虧損</li>
+</ul></div>
+
+<div class="section"><div class="section-title">解法分級</div>
+<ul class="solutions">
+<li><strong>L4 AI 輔助</strong>：報價需讀懂圖面幾何、估算焊縫長度與填充量，是對非結構化圖面內容的理解與判斷，需以 AI 或建模輔助，故屬 L4。</li>
 </ul></div>
 
 <div class="section"><div class="section-title">解決方案</div>
@@ -102,7 +107,7 @@ tr:nth-child(even) td { background: #f0fdf4; }
 
 <!-- ===== 2 ===== -->
 <div class="solution">
-<div class="solution-title">2. 焊接機器人程式優化困難、碰撞風險高 <span class="priority high">高優先</span></div>
+<div class="solution-title">對應 OP-02｜2. 焊接機器人程式優化困難、碰撞風險高 <span class="priority high">高優先</span></div>
 
 <div class="section"><div class="section-title">問題描述</div>
 <ul class="problems">
@@ -110,6 +115,11 @@ tr:nth-child(even) td { background: #f0fdf4; }
 <li>試焊過程中碰撞夾具、工件的風險高，維修成本動輒數十萬</li>
 <li>路徑優化耗時，一次調校可能花 2–3 天，影響稼動率</li>
 <li>複雜焊縫（如多層多道、角焊縫變徑段）的路徑幾乎無法自動生成</li>
+</ul></div>
+
+<div class="section"><div class="section-title">解法分級</div>
+<ul class="solutions">
+<li><strong>L3+L4 組合</strong>：數位孿生模擬做路徑驗證與碰撞檢測屬規則型模擬（L3）；AI 路徑最佳化（遺傳/粒子群演算法）及視覺補償需依資料自動判斷，屬 L4。</li>
 </ul></div>
 
 <div class="section"><div class="section-title">解決方案</div>
@@ -165,7 +175,7 @@ tr:nth-child(even) td { background: #f0fdf4; }
 
 <!-- ===== 5 ===== -->
 <div class="solution">
-<div class="solution-title">5. 焊縫外觀全靠人工目檢、漏檢率高 <span class="priority high">高優先</span></div>
+<div class="solution-title">對應 QC-01｜5. 焊縫外觀全靠人工目檢、漏檢率高 <span class="priority high">高優先</span></div>
 
 <div class="section"><div class="section-title">問題描述</div>
 <ul class="problems">
@@ -173,6 +183,11 @@ tr:nth-child(even) td { background: #f0fdf4; }
 <li>不同檢驗員判定標準不一致，同一焊縫 A 判合格 B 判不合格</li>
 <li>檢驗報告手寫或 Excel 紀錄，整理費時且容易遺漏</li>
 <li>焊接缺陷（氣孔、咬邊、未熔合、飛濫）的分類與統計缺乏系統化</li>
+</ul></div>
+
+<div class="section"><div class="section-title">解法分級</div>
+<ul class="solutions">
+<li><strong>L4 AI 輔助</strong>：需對焊縫影像做缺陷辨識與分級，屬判讀非結構化視覺內容，需深度學習模型（YOLO 等），故為 L4。</li>
 </ul></div>
 
 <div class="section"><div class="section-title">解決方案</div>
@@ -226,7 +241,7 @@ tr:nth-child(even) td { background: #f0fdf4; }
 
 <!-- ===== 6 ===== -->
 <div class="solution">
-<div class="solution-title">6. 品質追溯斷鏈、認證稽核資料不全 <span class="priority high">高優先</span></div>
+<div class="solution-title">對應 QC-02｜6. 品質追溯斷鏈、認證稽核資料不全 <span class="priority high">高優先</span></div>
 
 <div class="section"><div class="section-title">問題描述</div>
 <ul class="problems">
@@ -234,6 +249,11 @@ tr:nth-child(even) td { background: #f0fdf4; }
 <li>ASME / ISO 3834 / DNV 認證稽核前才臨時補資料，品質系統形同虛設</li>
 <li>焊接參數紀錄紙本化，查找困難，資料不完整率 &gt;30%</li>
 <li>焊材批號與進貨檢驗報告（Mill Certificate）沒有與焊接紀錄關聯</li>
+</ul></div>
+
+<div class="section"><div class="section-title">解法分級</div>
+<ul class="solutions">
+<li><strong>L2+L3 組合</strong>：焊接資料擷取（Data Logger）、RFID/掃碼綁定屬系統串接（L2）；認證稽核文件一鍵匯出屬規則自動化（L3），不需 LLM。</li>
 </ul></div>
 
 <div class="section"><div class="section-title">解決方案</div>
@@ -287,7 +307,7 @@ tr:nth-child(even) td { background: #f0fdf4; }
 
 <!-- ===== 7 ===== -->
 <div class="solution">
-<div class="solution-title">7. 焊接規格文件混亂、焊工資格管理不全 <span class="priority high">高優先</span></div>
+<div class="solution-title">對應 KM-01｜7. 焊接規格文件混亂、焊工資格管理不全 <span class="priority high">高優先</span></div>
 
 <div class="section"><div class="section-title">問題描述</div>
 <ul class="problems">
@@ -295,6 +315,11 @@ tr:nth-child(even) td { background: #f0fdf4; }
 <li>文件版本混亂，現場使用過期版 WPS 導致焊接不良的事件時有發生</li>
 <li>焊工證照到期日靠人工 Excel 追蹤，遺漏續證導致資格過期</li>
 <li>新產品需要的新 WPS 試驗流程不標準，常延誤專案時程</li>
+</ul></div>
+
+<div class="section"><div class="section-title">解法分級</div>
+<ul class="solutions">
+<li><strong>L2+L3 組合</strong>：文件管理系統與權限控管屬系統串接（L2）；證照到期提醒、WPS 合規檢查引擎屬規則自動化（L3），不需 LLM。</li>
 </ul></div>
 
 <div class="section"><div class="section-title">解決方案</div>
@@ -356,7 +381,7 @@ tr:nth-child(even) td { background: #f0fdf4; }
 
 <!-- ===== 3 ===== -->
 <div class="solution">
-<div class="solution-title">3. 焊接參數手動設定、製程異常難追溯 <span class="priority medium">中優先</span></div>
+<div class="solution-title">對應 OP-03｜3. 焊接參數手動設定、製程異常難追溯 <span class="priority medium">中優先</span></div>
 
 <div class="section"><div class="section-title">問題描述</div>
 <ul class="problems">
@@ -364,6 +389,11 @@ tr:nth-child(even) td { background: #f0fdf4; }
 <li>焊接不良發現時間晚（通常在後段加工或檢測時才發現），回溯原因困難</li>
 <li>熱輸入量無即時監控，偏離規格時無預警</li>
 <li>製程異常的成本追蹤（重工、報廢）為估算，無法精確計算</li>
+</ul></div>
+
+<div class="section"><div class="section-title">解法分級</div>
+<ul class="solutions">
+<li><strong>L2+L3 組合</strong>：焊接參數數位管理與 IoT 即時監控屬系統串接（L2）；±10% 偏離預警與 Cp/Cpk 分析屬規則自動化（L3），不需 LLM。</li>
 </ul></div>
 
 <div class="section"><div class="section-title">解決方案</div>
@@ -417,7 +447,7 @@ tr:nth-child(even) td { background: #f0fdf4; }
 
 <!-- ===== 4 ===== -->
 <div class="solution">
-<div class="solution-title">4. 排程不考慮焊接特性、插單就天下大亂 <span class="priority medium">中優先</span></div>
+<div class="solution-title">對應 OP-04｜4. 排程不考慮焊接特性、插單就天下大亂 <span class="priority medium">中優先</span></div>
 
 <div class="section"><div class="section-title">問題描述</div>
 <ul class="problems">
@@ -425,6 +455,11 @@ tr:nth-child(even) td { background: #f0fdf4; }
 <li>客戶插單時全廠重排，資深師傅花 2–4 小時重調排程</li>
 <li>夾具衝突導致工件等待，生產瓶頸常出現在夾具準備區</li>
 <li>預熱/後熱工件與常溫工件混排，延長製程時間且增加品質風險</li>
+</ul></div>
+
+<div class="section"><div class="section-title">解法分級</div>
+<ul class="solutions">
+<li><strong>L3 規則型自動化</strong>：排程最佳化靠約束求解引擎（OR-Tools / OptaPlanner）與既定規則自動重排，屬於規則型自動化，不需 LLM。</li>
 </ul></div>
 
 <div class="section"><div class="section-title">解決方案</div>
@@ -478,7 +513,7 @@ tr:nth-child(even) td { background: #f0fdf4; }
 
 <!-- ===== 8 ===== -->
 <div class="solution">
-<div class="solution-title">8. 資深焊工經驗流失、新人成長慢 <span class="priority medium">中優先</span></div>
+<div class="solution-title">對應 KM-02｜8. 資深焊工經驗流失、新人成長慢 <span class="priority medium">中優先</span></div>
 
 <div class="section"><div class="section-title">問題描述</div>
 <ul class="problems">
@@ -486,6 +521,11 @@ tr:nth-child(even) td { background: #f0fdf4; }
 <li>新焊工培訓週期長（通常 6–12 個月才能獨立作業），且成長速度因師傅而異</li>
 <li>異常排除（如氣孔原因判斷、咬邊修正方法）全靠口耳相傳，知識易流失</li>
 <li>離職/退休的資深焊工帶走關鍵知識，新人摸索期延長</li>
+</ul></div>
+
+<div class="section"><div class="section-title">解法分級</div>
+<ul class="solutions">
+<li><strong>L2+L3+L4 組合</strong>：知識庫建置與學習平台屬系統串接/規則管理（L2+L3）；AI 異常診斷助手（LLM + RAG + 影像辨識）屬 L4。</li>
 </ul></div>
 
 <div class="section"><div class="section-title">解決方案</div>
@@ -539,7 +579,7 @@ tr:nth-child(even) td { background: #f0fdf4; }
 
 <!-- ===== 9 ===== -->
 <div class="solution">
-<div class="solution-title">9. 專案獲利不清楚、報價與實際成本脫鉤 <span class="priority medium">中優先</span></div>
+<div class="solution-title">對應 DM-01｜9. 專案獲利不清楚、報價與實際成本脫鉤 <span class="priority medium">中優先</span></div>
 
 <div class="section"><div class="section-title">問題描述</div>
 <ul class="problems">
@@ -547,6 +587,11 @@ tr:nth-child(even) td { background: #f0fdf4; }
 <li>報價與實際成本的差異（material variance, labor variance）沒有系統化追蹤</li>
 <li>隱性成本（重工、報廢、趕工加班、夾具損耗）未納入專案成本計算</li>
 <li>業務部門無法即時知道哪些客戶/產品線賺錢、哪些虧損</li>
+</ul></div>
+
+<div class="section"><div class="section-title">解法分級</div>
+<ul class="solutions">
+<li><strong>L3 規則型自動化</strong>：成本串接、差異比對、毛利率儀表板與 80% 預警全為既定規則與計算自動化，屬於 L3，不需 LLM。</li>
 </ul></div>
 
 <div class="section"><div class="section-title">解決方案</div>
@@ -600,7 +645,7 @@ tr:nth-child(even) td { background: #f0fdf4; }
 
 <!-- ===== 10 ===== -->
 <div class="solution">
-<div class="solution-title">10. 環安監測不足、個資與圖面外洩風險 <span class="priority medium">中優先</span></div>
+<div class="solution-title">對應 RC-01｜10. 環安監測不足、個資與圖面外洩風險 <span class="priority medium">中優先</span></div>
 
 <div class="section"><div class="section-title">問題描述</div>
 <ul class="problems">
@@ -608,6 +653,11 @@ tr:nth-child(even) td { background: #f0fdf4; }
 <li>PPE（個人防護裝備）穿戴合規性靠人工巡檢，難以全天候覆蓋</li>
 <li>客戶提供的設計圖面散落在個人電腦 / 隨身碟，缺乏存取控管</li>
 <li>焊工個資（薪資、證照、健康檢查紀錄）缺乏保護，有外洩風險</li>
+</ul></div>
+
+<div class="section"><div class="section-title">解法分級</div>
+<ul class="solutions">
+<li><strong>L3+L4 組合</strong>：環安 IoT 監測連動、DLP 權限控管屬系統串接與規則自動化（L3）；AI PPE 影像辨識需模型判讀非結構化影像，屬 L4。</li>
 </ul></div>
 
 <div class="section"><div class="section-title">解決方案</div>
@@ -664,7 +714,7 @@ tr:nth-child(even) td { background: #f0fdf4; }
 <!-- 底部 -->
 <!-- ============================================================ -->
 <div class="no-print" style="text-align:center;margin:32px 0;">
-<a href="焊接廠評估表.html" class="btn">返回評估表</a>
+<a href="welding-questionnaire.html" class="btn">返回評估表</a>
 </div>
 <div style="margin-top:48px;padding-top:24px;border-top:1px solid #e2e8f0;color:#64748b;font-size:0.9em;text-align:center;">
 此為內部配套方案，對應評估表每一項選項，依優先級排序

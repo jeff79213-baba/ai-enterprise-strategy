@@ -53,7 +53,7 @@ h2 { border-left: 4px solid #dc2626; padding-left: 12px; margin-top: 32px; color
 <div class="item">
 <div class="item-header"><span class="item-title">報價依賴老師傅估算、速度慢且不標準</span><span class="priority high">高優先</span></div>
 <div class="checkbox-wrap">
-<input type="checkbox" id="op01">
+<input type="checkbox" id="op01" data-id="OP-01">
 <div>
 <ul class="problems">
 <li>每張報價單需要資深師傅花 30-60 分鐘人工估算焊縫長度、填充量、工時和材料成本，業務等待回覆期間常流失訂單</li>
@@ -67,7 +67,7 @@ h2 { border-left: 4px solid #dc2626; padding-left: 12px; margin-top: 32px; color
 <div class="item">
 <div class="item-header"><span class="item-title">焊接機器人程式優化困難、碰撞風險高</span><span class="priority high">高優先</span></div>
 <div class="checkbox-wrap">
-<input type="checkbox" id="op02">
+<input type="checkbox" id="op02" data-id="OP-02">
 <div>
 <ul class="problems">
 <li>機器人焊接路徑全靠人工示教或手寫程式，路徑不夠優化導致空行程長、焊接週期時間久</li>
@@ -81,7 +81,7 @@ h2 { border-left: 4px solid #dc2626; padding-left: 12px; margin-top: 32px; color
 <div class="item">
 <div class="item-header"><span class="item-title">焊接參數手動設定、製程異常難追溯</span><span class="priority medium">中優先</span></div>
 <div class="checkbox-wrap">
-<input type="checkbox" id="op03">
+<input type="checkbox" id="op03" data-id="OP-03">
 <div>
 <ul class="problems">
 <li>焊接電流、電壓、送絲速度等參數全靠師傅手動設定，記在紙本或白板上，換人操作或換料時容易出錯</li>
@@ -95,7 +95,7 @@ h2 { border-left: 4px solid #dc2626; padding-left: 12px; margin-top: 32px; color
 <div class="item">
 <div class="item-header"><span class="item-title">排程不考慮焊接特性、插單就天下大亂</span><span class="priority medium">中優先</span></div>
 <div class="checkbox-wrap">
-<input type="checkbox" id="op04">
+<input type="checkbox" id="op04" data-id="OP-04">
 <div>
 <ul class="problems">
 <li>排程只考慮機台和交期，卻忽略了焊工技能等級、夾治具是否共用、是否需要預熱或後熱等焊接特有因素</li>
@@ -111,7 +111,7 @@ h2 { border-left: 4px solid #dc2626; padding-left: 12px; margin-top: 32px; color
 <div class="item">
 <div class="item-header"><span class="item-title">焊縫外觀全靠人工目檢、漏檢率高</span><span class="priority high">高優先</span></div>
 <div class="checkbox-wrap">
-<input type="checkbox" id="qc01">
+<input type="checkbox" id="qc01" data-id="QC-01">
 <div>
 <ul class="problems">
 <li>焊縫外觀品質全靠檢驗員肉眼檢查，疲勞時漏檢率高，判定標準因人而異</li>
@@ -125,7 +125,7 @@ h2 { border-left: 4px solid #dc2626; padding-left: 12px; margin-top: 32px; color
 <div class="item">
 <div class="item-header"><span class="item-title">品質追溯斷鏈、認證稽核資料不全</span><span class="priority high">高優先</span></div>
 <div class="checkbox-wrap">
-<input type="checkbox" id="qc02">
+<input type="checkbox" id="qc02" data-id="QC-02">
 <div>
 <ul class="problems">
 <li>發生品質異常時，無法快速追溯「哪個焊工、用什麼焊接參數、哪批焊材、哪支焊條」的完整資訊</li>
@@ -141,7 +141,7 @@ h2 { border-left: 4px solid #dc2626; padding-left: 12px; margin-top: 32px; color
 <div class="item">
 <div class="item-header"><span class="item-title">焊接規格文件混亂、焊工資格管理不全</span><span class="priority high">高優先</span></div>
 <div class="checkbox-wrap">
-<input type="checkbox" id="km01">
+<input type="checkbox" id="km01" data-id="KM-01">
 <div>
 <ul class="problems">
 <li>WPS（焊接程序規範）、PQR（焊接程序 qualification 記錄）、WPQR（焊工qualification 記錄）分散在紙本和 PDF 中，版本混亂找不到最新版</li>
@@ -155,7 +155,7 @@ h2 { border-left: 4px solid #dc2626; padding-left: 12px; margin-top: 32px; color
 <div class="item">
 <div class="item-header"><span class="item-title">資深焊工經驗流失、新人成長慢</span><span class="priority medium">中優先</span></div>
 <div class="checkbox-wrap">
-<input type="checkbox" id="km02">
+<input type="checkbox" id="km02" data-id="KM-02">
 <div>
 <ul class="problems">
 <li>資深焊工和焊接工程師的經驗（參數設定、缺陷排除、姿勢技巧）只存在個人腦袋或筆記本，退休或離職後知識徹底流失</li>
@@ -171,7 +171,7 @@ h2 { border-left: 4px solid #dc2626; padding-left: 12px; margin-top: 32px; color
 <div class="item">
 <div class="item-header"><span class="item-title">專案獲利不清楚、報價與實際成本脫鉤</span><span class="priority medium">中優先</span></div>
 <div class="checkbox-wrap">
-<input type="checkbox" id="dm01">
+<input type="checkbox" id="dm01" data-id="DM-01">
 <div>
 <ul class="problems">
 <li>無法清楚知道每個專案、每個產品、每個客戶的真實獲利狀況，決策缺乏數據依據</li>
@@ -187,7 +187,7 @@ h2 { border-left: 4px solid #dc2626; padding-left: 12px; margin-top: 32px; color
 <div class="item">
 <div class="item-header"><span class="item-title">環安監測不足、個資與圖面外洩風險</span><span class="priority medium">中優先</span></div>
 <div class="checkbox-wrap">
-<input type="checkbox" id="rc01">
+<input type="checkbox" id="rc01" data-id="RC-01">
 <div>
 <ul class="problems">
 <li>焊接煙塵濃度、弧光輻射、噪音等職安指標沒有即時監測，職安稽核時常有缺失</li>
@@ -212,6 +212,7 @@ function exportChecked() {
   const checked = Array.from(document.querySelectorAll('.item input:checked')).map(cb => {
     const item = cb.closest('.item');
     return {
+      id: cb.dataset.id,
       title: item.querySelector('.item-title').textContent,
       priority: item.querySelector('.priority').textContent
     };
